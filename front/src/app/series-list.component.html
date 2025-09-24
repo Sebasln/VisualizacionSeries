@@ -1,0 +1,15 @@
+<h2>Lista de Series</h2>
+
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+
+<ul *ngIf="series.length > 0">
+  <li *ngFor="let item of series">
+    {{ item.ID }}: {{ item.title }}
+  </li>
+</ul>
+
+<p *ngIf="series.length === 0 && !errorMessage">
+  Cargando series... o no hay series disponibles.
+</p>

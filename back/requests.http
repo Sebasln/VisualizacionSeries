@@ -1,0 +1,13 @@
+@host = http://localhost:4004
+
+###
+# @name createSeries
+# Create a new Series
+POST {{host}}/odata/v4/series-tracker/Series
+Content-Type: application/json
+
+{
+    "title": "The Mandalorian",
+    "description": "A lone bounty hunter in the outer reaches of the galaxy.",
+    "totalEpisodes": 24
+}
