@@ -11,6 +11,7 @@ name lleva key para que esas entidades no tengan nombres repetidos*/
 
 entity ViewingPartners : cuid, managed {
     key name : String(100) not null;
+        series  : Composition of many Series on series.partner = $self;
 }
 
 entity Series : cuid, managed {
@@ -18,4 +19,6 @@ entity Series : cuid, managed {
     description     : String;
     currentEpisode  : Integer default 1;
     totalEpisodes   : Integer;
+    // Relación: Cada serie pertenece a una persona (ViewingPartner)
+    partner         : Association to ViewingPartners;
 }

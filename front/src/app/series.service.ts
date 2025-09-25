@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 
 // Define una interfaz para la estructura de tus datos de Series
 export interface Series {
-  ID: number; // Asumiendo que hay un ID
+  ID: string; // El ID de CAP (cuid) es un string
   title: string; // Asumiendo que hay un título
   // Puedes añadir más propiedades según la estructura real de tu backend
 }
